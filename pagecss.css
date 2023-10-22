@@ -1,0 +1,146 @@
+body{
+    background:linear-gradient(270deg,#ffa500, #e35705ef);
+    height: 100vh;
+   
+    margin:0;
+    padding:0;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+/*06 lignes et 06 colonnes 
+
+*/
+.contenu{
+    width:80%;
+   
+   
+   margin:auto;
+   margin-top: 80px;
+    background-color:white;
+    border-radius:5px;
+    display:grid;
+    flex-direction:row;
+    flex-wrap: wrap;
+    grid-template-columns:repeat(6,1fr);
+    grid-template-rows:repeat(6,1fr) ;
+    grid-template-areas:
+   "navbar navbar navbar navbar navbar navbar"
+   "contenu1 contenu1 contenu1 contenu1 contenu2 contenu2"
+   "contenu1 contenu1 contenu1 contenu1 contenu2 contenu2"
+   "contenu3 contenu3 contenu3 contenu4 contenu4 contenu4"
+   "contenu3 contenu3 contenu3 contenu4 contenu4 contenu4"
+   "contenu3 contenu3 contenu3 contenu4 contenu4 contenu4"
+;}
+
+.logo{
+    font-size: 18px;
+    font-weight: 800;
+    font-style:oblique;
+   
+    transform:rotateX(180deg);
+   animation-name:animlogo;
+   animation-duration:2s;
+   animation-timing-function:ease;
+  animation-iteration-count: infinite;
+
+}
+   
+.menu{
+    display:flex;
+    gap: 20px;
+    align-items:first baseline;
+}
+.identite {
+    display: flex;
+   padding:50px;
+}
+button {
+    background-color: orangered;
+    border:none;
+    color:white;
+    height: 25px;
+    width:20;
+    border-radius: 2px;
+    font-size: 11px;
+}
+a {
+    color:black;
+font-weight: bolder;}
+ 
+#img1{
+    height: 350px;
+    width: 700px;
+    border-radius: 5px;
+    padding-left:40px;
+}
+
+#img2 , #img3{
+    height: 280px;
+    width: 500px;
+    border-radius: 5px;
+    
+}
+
+
+
+#photoprofil{
+    height: 50px;
+    width:60px;
+    border-radius:150px;
+}
+.item1 {
+
+    grid-area:navbar;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+  padding:30px;
+  
+    ;
+ 
+}
+
+.item2 {
+    
+    grid-area:contenu1;
+ 
+}
+.item3{
+  
+    grid-area:contenu2;
+}
+.item4{
+  
+    grid-area: contenu3;
+padding-top: 30px;
+padding-left:30px;
+}
+.item5{
+    padding-top:30px;
+  
+    grid-area:contenu4;
+   
+}
+
+
+
+
+@keyframes animlogo {
+    
+    
+    0%{
+        
+        transform:rotateY(0deg);
+    }
+    50%{
+        
+        transform:rotateY(45deg);
+    }
+        
+
+    100%{
+        
+        transform:rotateY(360deg);
+    }
+    
+}
